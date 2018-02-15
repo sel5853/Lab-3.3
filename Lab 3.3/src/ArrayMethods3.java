@@ -3,6 +3,7 @@ public class ArrayMethods3 {
 
 	public static String[] mergeSort(String[] list)
 	{
+		int x = list.length / 2;
 		
 	}
 	
@@ -10,7 +11,16 @@ public class ArrayMethods3 {
 	{
 		front = list1[0];
 		back = list1[list1.length-1];
-		
+		int a = 0;
+		int pivot = 0;
+		for(int x = 0; x < list1.length; x++)
+		{
+			if(list1[x] <= front)
+			{
+				a = list1[x];
+			}
+		}
+		return pivot;
 	}
 	
 	public static void quickSort(int[] list1, int front, int back)
@@ -24,5 +34,17 @@ public class ArrayMethods3 {
 			//Right Side
 			quickSort(list1, pivdex + 1, back);
 		}
+	}
+	
+	public static void swap(int list[], int index1, int index2)
+	{
+		int x = list[index1];
+		list[index1] = list[index2];
+		list[index2] = x;
+	}
+	
+	public static void main(String[] args)
+	{
+		
 	}
 }
