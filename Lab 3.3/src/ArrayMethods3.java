@@ -29,14 +29,14 @@ public class ArrayMethods3 {
 		int pivot = list1[front];													
 		while(front < back)															//While first index < last index
 		{
-			while(list1[front] < pivot)												//While 
+			while(list1[front] < pivot)												//While value of front index < value of pivot
 			{
-				front++;
+				front++;															//Move on from front b/c value is < pivot, it stays on the left
 			}
 			
-			while(list1[back] > pivot)												//While 
+			while(list1[back] > pivot)												//While value of back index > pivot
 			{
-				back--;
+				back--;																//Move on from back b/c value is > pivot, it stays on the right
 			}
 			
 			if(front <= back)														//If front index <= back index
@@ -46,7 +46,7 @@ public class ArrayMethods3 {
 				back--;
 			}
 		}
-		return front;
+		return front;																//Returns index of the pivot
 	}
 	
 	public static void quickSort(int[] list1, int front, int back)
@@ -54,8 +54,8 @@ public class ArrayMethods3 {
 		if(back > front)															
 		{
 			int pivdex = partition(list1, front, back);
-			quickSort(list1, front, pivdex - 1);									//Left side
-			quickSort(list1, pivdex, back);											//Right side
+			quickSort(list1, front, pivdex - 1);									//Quicksorts left side
+			quickSort(list1, pivdex, back);											//Quicksorts right side
 		}
 	}
 	
@@ -110,7 +110,7 @@ public class ArrayMethods3 {
 	
 	public static void main(String[] args)											//Testing code for Lab 3.3
 	{
-		int[] intList = {6, 3, 15, 2, 9, 4, 3, 17, 22, 14, 3};
+		int[] intList = {6, 3, 15, 2, 9, 4, 0, 3, 17, 22, 14, 3};
 		String[] stringList = {"hi", "yellow", "apple", "cookie", "bye", "orange", "blue", "yellow"};
 		
 		long start = System.nanoTime();
