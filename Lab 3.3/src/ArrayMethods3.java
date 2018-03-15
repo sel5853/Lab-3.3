@@ -74,7 +74,7 @@ public class ArrayMethods3 {
 		String[] combinedArray = new String[list1.length + list2.length];			//Creates new array for the sorted array
 		while(x < list1.length && y < list2.length && z < combinedArray.length)		//While each index is less than their array lengths
 		{			
-			if(list1[x].compareTo(list2[y]) <= 0)									//If list1[x] is before list2[y]
+			if(list1[x].compareTo(list2[y]) <= 0)									//If value of list1[x] is before list2[y]
 			{
 				combinedArray[z] = list1[x];										//The next value of combinedArray will = list1[x]
 				x++;
@@ -110,7 +110,7 @@ public class ArrayMethods3 {
 	
 	public static void main(String[] args)											//Testing code for Lab 3.3
 	{
-		int[] intList = {6, 3, 15, 2, 9, 4, 0, 3, 17, 22, 14, 3};
+		int[] intList = {6, 3, 15, 2, 1, 9, 4, 0, 3, 17, 22, 14, 3};
 		String[] stringList = {"hi", "yellow", "apple", "cookie", "bye", "orange", "blue", "yellow"};
 		
 		long start = System.nanoTime();
